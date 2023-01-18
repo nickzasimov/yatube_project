@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 
 
@@ -8,4 +7,5 @@ def index(request):
 
 
 def group_posts(request, slug):
-    return HttpResponse(f'Страница группы {slug}')
+    template = 'posts/group_list.html'
+    return render(request, template)
